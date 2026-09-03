@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Exercicio2.1</title>
+</head>
+<body>
+<script>
+var numero1 = prompt("digite um número");
+var numero2 = prompt("digite outro número");
+
+try{
+        numero1 = Number(numero1);
+        numero2 = Number(numero2);
+
+if (isNaN(numero1) || isNaN(numero2)){
+throw new Error("digite números válidos.");
+}
+
+
+if (numero1 > numero2)
+{
+    alert ("O primeiro número é maior que o segundo")
+      alert (numero2 + " Esse número é menor")
+}
+else if (numero2 > numero1)
+{
+    alert ("O segundo número é maior que o primeiro")
+    alert (numero1 + " Esse número é menor")
+}
+}
+catch (erro) {
+        alert("Valor inválido: Por favor, digite apenas números.");
+        console.log(erro.message); 
+    }
+
+</script>
+</body>
+</html>
