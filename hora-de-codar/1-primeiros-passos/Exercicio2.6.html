@@ -1,0 +1,60 @@
+<!--2.6. Leia 4 valores diferentes e informe apenas o primeiro, o último e o maior deles. -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Exercicio2.3</title>
+</head>
+<body>
+<script>
+var numero1 = prompt("digite o 1° número");
+var numero2 = prompt("digite o 2° número");
+var numero3 = prompt("digite o 3° um número");
+var numero4 = prompt("digite o 4° um número");
+
+
+
+try{
+ numero1 = Number(numero1);
+ numero2 = Number(numero2);
+  numero3 = Number(numero3);
+   numero4 = Number(numero4);
+   
+  if (isNaN(numero1) || isNaN(numero2 || isNaN(numero3) || isNaN(numero4) || isNaN(numero5) || isNaN(numero6))){
+throw new Error("digite números válidos.");
+}
+
+alert ("esse é o primeiro número" + numero1)
+alert ("esse é o último número" + numero4)
+
+if (numero1 > numero2 && numero1 > numero3 && numero1 > numero4){
+
+
+alert ("esse é o maior número" + numero1)
+}
+
+else if(numero2 > numero1 && numero2 > numero3 && numero2 > numero4)
+{
+alert ("esse é o maior número" + numero2)
+}
+else if(numero3 > numero1 && numero3 > numero2 && numero3 > numero4)
+{
+alert ("esse é o maior número" + numero3)
+}
+else if(numero4 > numero1 && numero4 > numero2 && numero4 > numero3)
+{
+alert ("esse é o maior número" + numero3)
+}
+
+
+
+}
+
+catch (erro) {
+        alert("Valor inválido: Por favor, digite apenas números.");
+        console.log(erro.message); 
+    }
+</script>
+</body>
+</html>

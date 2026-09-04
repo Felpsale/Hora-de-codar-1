@@ -4,18 +4,25 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Exercicio2.3</title>
+//.4. Leia 3 valores diferentes e mostre a soma dos 2 maiores.
 </head>
 <body>
 <script>
-var numero1 = prompt("digite um número");
+var numero1 = (prompt("digite um número"));
 var numero2 = prompt("digite outro número");
 var numero3 = prompt("digite mais um número");
+
+var resultado1 = (numero1 + numero2);
+var resultado2 = (numero1 + numero3);
+var resultado3 = (numero1 + numero3);
 
 try{
        numero1 = Number(numero1);
         numero2 = Number(numero2);
          numero3 = Number(numero3);
-
+if (isNaN(numero1) || isNaN(numero2 || isNaN(numero3))){
+throw new Error("digite números válidos.");
+}
 if (numero1 > numero2 && numero1 > numero3)
 {
     alert (numero1)
@@ -29,7 +36,10 @@ else if (numero3 > numero1 && numero3 > numero2)
     alert (numero3)
 }
 }
-catch{}
+catch (erro) {
+        alert("Valor inválido: Por favor, digite apenas números.");
+        console.log(erro.message); 
+    }
 
 </script>
 </body>
