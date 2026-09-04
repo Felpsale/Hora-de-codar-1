@@ -1,0 +1,54 @@
+<!--2.8. Leia 4 números, aceitando apenas valores maiores que 0 e menores que 10. Calcule a média e:
+
+	- se média > 5, exiba "Você passou no teste";
+	- caso contrário, exiba "Tente novamente".-->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Exercicio2.7</title>
+</head>
+<body>
+<script>
+var numero1 = prompt("digite a sua nota");
+var numero2 = prompt("digite a sua nota");
+var numero3 = prompt("digite a sua nota");
+var numero4 = prompt("digite a sua nota");
+
+
+
+
+try{
+numero1 = Number(numero1);
+numero2 = Number(numero2);
+numero3 = Number(numero3);
+numero4 = Number(numero4);
+media   =    Number(media);
+
+
+  if (isNaN(numero1) || isNaN(numero2) || isNaN(numero3) || isNaN(numero4)){
+throw new Error("digite números válidos.");
+}
+
+if (numero1 < 0 || numero1 > 10 || numero2 < 0 || numero2 > 10 || numero3 < 0 || numero3 > 10 || numero4 < 0 || numero4 > 10){
+throw new Error("digite números entre 0 e 10.");
+}
+var media = (numero1 + numero2 + numero3 + numero4) / 4;
+if (media > 5) {
+    alert("Você passou no teste" );
+}
+else {
+    alert("Tente novamente");
+
+
+}
+
+}
+catch (erro) {
+        alert("Valor inválido: Por favor, digite apenas números.");
+        console.log(erro.message); 
+    }
+</script>
+</body>
+</html>

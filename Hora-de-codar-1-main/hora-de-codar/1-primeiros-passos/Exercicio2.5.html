@@ -1,0 +1,41 @@
+<!-- 2.5. Leia 6 valores, exiba todos e calcule a média aritmética. -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Exercicio2.3</title>
+</head>
+<body>
+<script>
+var numero1 = prompt("digite o 1° número");
+var numero2 = prompt("digite o 2° número");
+var numero3 = prompt("digite o 3° um número");
+var numero4 = prompt("digite o 4° um número");
+var numero5 = prompt("digite o 5° um número");
+var numero6 = prompt("digite o 6° um número");
+
+var aritmetica = (numero1 + numero2 + numero3 + numero4 + numero5 + numero6) / 6;
+try{
+numero1 = Number(numero1);
+numero2 = Number(numero2);
+numero3 = Number(numero3);
+numero4 = Number(numero4);
+numero5 = Number(numero5);
+numero6 = Number(numero6);
+  if (isNaN(numero1) || isNaN(numero2 || isNaN(numero3) || isNaN(numero4) || isNaN(numero5) || isNaN(numero6))){
+throw new Error("digite números válidos.");
+}
+
+alert("Os números digitados foram " + numero1 + " " + numero2 + " " + numero3 + " " + numero4 + " " + numero5 + " " + numero6);
+alert("O valor aritmético é" + aritmetica)
+
+
+}
+catch (erro) {
+        alert("Valor inválido: Por favor, digite apenas números.");
+        console.log(erro.message); 
+    }
+</script>
+</body>
+</html>

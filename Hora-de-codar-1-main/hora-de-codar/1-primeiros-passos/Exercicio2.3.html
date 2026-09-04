@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Exercicio2.3</title>
+</head>
+<body>
+<script>
+var numero1 = prompt("digite um número");
+var numero2 = prompt("digite outro número");
+var numero3 = prompt("digite mais um número");
+try{
+ numero1 = Number(numero1);
+ numero2 = Number(numero2);
+  numero3 = Number(numero3);
+  if (isNaN(numero1) || isNaN(numero2 || isNaN(numero3))){
+throw new Error("digite números válidos.");
+}
+
+if (numero1 >= numero2 && numero1 >= numero3)
+{
+    alert ("Esse é o maior número " + numero1)
+
+}
+else if (numero2 >= numero1 && numero2 >= numero3)
+{
+        alert ("Esse é o maior número " + numero2)
+}
+else if (numero3 >= numero1 && numero3 >= numero2)
+{
+       alert ("Esse é o maior número " + numero3)
+}
+if (numero1 <= numero2 && numero1 <= numero3)
+{
+    alert ("Esse é o menor número " + numero1)
+}
+else if (numero2 <= numero1 && numero2 <= numero3)
+{
+        alert ("Esse é o menor número " + numero2)
+}
+else if (numero3 <= numero1 && numero3 <= numero2)
+{
+       alert ("Esse é o menor número " + numero3)
+}
+}
+catch (erro) {
+        alert("Valor inválido: Por favor, digite apenas números.");
+        console.log(erro.message); 
+    }
+</script>
+</body>
+</html>

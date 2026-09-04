@@ -1,0 +1,65 @@
+<!--2.7. Leia 6 números. Some apenas os valores menores que 72. Exiba a soma e todos os valores informados. -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Exercicio2.7</title>
+</head>
+<body>
+<script>
+var numero1 = prompt("digite o primeiro número");
+var numero2 = prompt("digite o segundo número");
+var numero3 = prompt("digite o terceiro número");
+var numero4 = prompt("digite o quarto número");
+var numero5 = prompt("digite o quinto número");
+var numero6 = prompt("digite o sexto número");
+var soma = 0;
+
+
+
+try{
+numero1 = Number(numero1);
+numero2 = Number(numero2);
+numero3 = Number(numero3);
+numero4 = Number(numero4);
+numero5 = Number(numero5);
+numero6 = Number(numero6);
+soma    =    Number(soma);
+
+
+  if (isNaN(numero1) || isNaN(numero2) || isNaN(numero3) || isNaN(numero4) || isNaN(numero5) || isNaN(numero6)){
+throw new Error("digite números válidos.");
+}
+
+if (numero1 < 72) {
+    soma += numero1;
+}
+if (numero2 < 72) {
+    soma += numero2;
+}
+if (numero3 < 72) {
+    soma += numero3;
+}
+if (numero4 < 72) {
+    soma += numero4;
+}
+if (numero5 < 72) {
+    soma += numero5;
+}
+if (numero6 < 72) {
+    soma += numero6;
+}
+
+alert("Soma dos valores menores que 72: " + soma);
+alert("Os números digitados foram: " + numero1 + ", " + numero2 + ", " + numero3 + ", " + numero4 + ", " + numero5 + ", " + numero6);
+
+
+}
+catch (erro) {
+        alert("Valor inválido: Por favor, digite apenas números.");
+        console.log(erro.message); 
+    }
+</script>
+</body>
+</html>
