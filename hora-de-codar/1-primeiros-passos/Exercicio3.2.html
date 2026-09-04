@@ -1,0 +1,24 @@
+<!--3.1. Crie uma bomba-relógio com contagem regressiva de 30 até 0 e, ao final, escreva `EXPLOSÃO`.-->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Exercicio3.1</title>
+</head>
+<body>
+<script>
+let contagem = prompt("Digite o tempo de contagem regressiva em segundos (digite até 30 segundos):");
+contagem = parseInt(contagem);
+if (isNaN(contagem) || contagem < 0 || contagem > 30) {
+    alert("digite um número entre 0 e 30.");
+} else {
+    for (; contagem > 0; contagem--) {
+        alert(contagem);
+    }
+    alert("EXPLOSÃO");
+}
+</script>
+    
+</body>
+</html>

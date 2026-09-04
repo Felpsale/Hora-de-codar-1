@@ -1,0 +1,41 @@
+<!--2.9. Leia o ano de nascimento e informe se a pessoa pode votar no ano atual (sem considerar o mês).-->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Exercicio2.9</title>
+</head>
+<body>
+<script>
+var numero1 = prompt("digite a sua data de nascimento, sem considerar o mês e dia");
+
+try{
+numero1 = Number(numero1);
+  if (isNaN(numero1)){
+throw new Error("digite números válidos.");
+}
+
+if (numero1 < 1956|| numero1 > 2026){
+//considerei o ano de 1956 porque é a idade em que votar não é mais obrigatório.
+throw new Error("digite números entre 1956 e 2026.");
+}
+var anoatual = 2026;
+var idade = anoatual - numero1;
+    
+if (idade >= 16) {
+    alert("Você pode votar este ano!" + " Sua idade é: " + " " + idade);
+}
+else {
+    alert("Você não pode votar este ano." + " Sua idade é: " + " " + idade);
+
+
+}
+
+}
+catch (error) {
+    alert(error.message);
+}
+</script>
+</body>
+</html>
