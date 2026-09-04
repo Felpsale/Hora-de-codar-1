@@ -9,7 +9,11 @@
 <body>
 <script>
 let contagem = prompt("Digite o tempo de contagem regressiva em segundos (digite até 30 segundos):");
-contagem = parseInt(contagem);
+try{
+contagem = Number(contagem);
+  if (isNaN(contagem)){
+throw new Error("digite números válidos.");
+
 if (isNaN(contagem) || contagem < 0 || contagem > 30) {
     alert("digite um número entre 0 e 30.");
 } else {
@@ -17,6 +21,12 @@ if (isNaN(contagem) || contagem < 0 || contagem > 30) {
         alert(contagem);
     }
     alert("EXPLOSÃO");
+}
+  }
+
+}
+catch (error) {
+    alert(error.message);
 }
 </script>
     

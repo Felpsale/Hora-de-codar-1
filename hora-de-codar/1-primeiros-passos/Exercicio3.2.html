@@ -1,22 +1,32 @@
-<!--3.1. Crie uma bomba-relógio com contagem regressiva de 30 até 0 e, ao final, escreva `EXPLOSÃO`.-->
+<!--3.2. Leia dois valores. Enquanto o segundo valor for menor ou igual a zero, peça novamente esse mesmo valor. 
+Ao final, mostre a divisão do primeiro pelo segundo..-->
 <!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Exercicio3.1</title>
+    <title>Exercicio3.2</title>
 </head>
 <body>
 <script>
-let contagem = prompt("Digite o tempo de contagem regressiva em segundos (digite até 30 segundos):");
-contagem = parseInt(contagem);
-if (isNaN(contagem) || contagem < 0 || contagem > 30) {
-    alert("digite um número entre 0 e 30.");
-} else {
-    for (; contagem > 0; contagem--) {
-        alert(contagem);
-    }
-    alert("EXPLOSÃO");
+let numero1 = prompt("digite um número");
+let numero2 = prompt("digite outro número");
+try{
+numero1 = Number(numero1)
+numero2 = Number(numero2);
+  if (isNaN(numero1) || isNaN(numero2))
+  {
+throw new Error("digite números válidos.");
+}
+
+
+while(numero2 <= 0) {
+    numero2 = prompt("digite o número novamente");
+}
+alert("A divisão de " + numero1 + " por " + numero2 + " é: " + (numero1 / numero2));
+}
+catch (error) {
+    alert(error.message);
 }
 </script>
     
